@@ -1,0 +1,43 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "SQL Server: Enable TCP/IP (Run VS Code as Administrator)",
+			"type": "shell",
+			"command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"${workspaceFolder}\\scripts\\enable-sql-tcp.ps1\"",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "An Nhien Spa: Build",
+			"type": "shell",
+			"command": "npm run build",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "An Nhien Spa: Run on localhost:3001",
+			"type": "shell",
+			"command": "npm run start -- --port 3001",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"dependsOn": "An Nhien Spa: Build",
+			"dependsOrder": "sequence",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run An Nhien Spa on localhost 3001",
+			"type": "shell",
+			"command": "npm run start -- --port 3001",
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

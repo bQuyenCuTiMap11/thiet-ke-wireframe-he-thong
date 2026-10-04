@@ -1,0 +1,9 @@
+
+> an-nhien-spa-wireframe@0.1.0 start
+> next start --port 3002
+
+▲ Next.js 16.3.8
+- Local:         http://localhost:3002
+- Network:       http://192.168.231.1:3002
+✓ Ready in 128ms
+✓ Running next.config.mjs took 16ms
